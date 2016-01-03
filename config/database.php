@@ -43,7 +43,6 @@ return [
 	| choice installed on your machine before you begin development.
 	|
 	*/
-$creds = json_decode(file_get_contents($_SERVER['APP_SECRETS']), true);
 
 	'connections' => [
 
@@ -55,10 +54,10 @@ $creds = json_decode(file_get_contents($_SERVER['APP_SECRETS']), true);
 
 		'mysql' => [
 			'driver'    => 'mysql',
-            'host'      => env('DB_HOST', $creds['MYSQL']['HOST']),
-            'database'  => env('DB_DATABASE', $creds['MYSQL']['DATABASE']),
-            'username'  => env('DB_USERNAME', $creds['MYSQL']['USER']),
-            'password'  => env('DB_PASSWORD', $creds['MYSQL']['PASSWORD']),
+			'host'      => env('DB_HOST', 'localhost'),
+			'database'  => env('DB_DATABASE', 'forge'),
+			'username'  => env('DB_USERNAME', 'forge'),
+			'password'  => env('DB_PASSWORD', ''),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
