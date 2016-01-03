@@ -12,7 +12,7 @@ class CreatePaymentsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('Payments', function(Blueprint $table)
+		Schema::create('payments', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('project_id')->unsigned();
@@ -34,7 +34,7 @@ class CreatePaymentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('Payments');
+		Schema::drop('payments');
 	}
 
 }

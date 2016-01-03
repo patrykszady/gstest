@@ -12,7 +12,7 @@ class CreateExpensesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('Expenses', function(Blueprint $table)
+		Schema::create('expenses', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('project_id')->unsigned();
@@ -39,7 +39,7 @@ class CreateExpensesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('Expenses');
+		Schema::drop('expenses');
 	}
 
 }

@@ -12,7 +12,7 @@ class CreateHoursTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('Hours', function(Blueprint $table)
+		Schema::create('hours', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('employee_id')->unsigned();  //change to integer? and employee_id
@@ -36,7 +36,7 @@ class CreateHoursTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('Hours');
+		Schema::drop('hours');
 	}
 
 }
