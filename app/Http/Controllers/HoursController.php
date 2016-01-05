@@ -38,8 +38,8 @@ class HoursController extends Controller {
 	public function create(Project $project)
 	{
 
-		$projects = Project::lists('project_name', 'id'); //sends an array of  'first_name' => 'id'
-		$subs = Sub::where('employee', '=', 1)->lists('first_name', 'id'); 
+		$projects = Project::get(); //sends an array of  'first_name' => 'id'
+		$subs = Sub::where('employee', '=', 1)->lists('first_name', 'id'); //where 'employee refers to if they're a GS employee..not an ID
 
 		//$clients = Client::lists('first_name', 'id'); //sends an array of  'first_name' => 'id'
 		

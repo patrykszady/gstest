@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-9 col-md-push-3">
 			<div class="panel panel-default">
-				<div class="panel-heading">Projects</div>
+				<div class="panel-heading"><a href="{{ action('ProjectsController@index') }}">Projects</a></div>
 				<div class="panel-body">
 					<div>
 					<a href="{{ action('ClientsController@index') }}" class="btn btn-primary">Create Project</a>
@@ -21,7 +21,7 @@
 		
 		<div class="col-md-3 col-md-pull-9">
 			<div class="panel panel-default">
-				<div class="panel-heading">Payments</div>
+				<div class="panel-heading"><a href="{{ action('PaymentsController@index') }}">Payments</a></div>
 				<div class="panel-body">
 					<div>
 					<a href="{{ action('PaymentsController@create') }}" class="btn btn-primary">Add Payment</a>
@@ -37,7 +37,7 @@
 	<div class="row">
 		<div class="col-md-7 col-md-push-5">
 			<div class="panel panel-default">
-				<div class="panel-heading">Unpaid Hours</div>
+				<div class="panel-heading"><a href="{{ action('HoursController@index') }}">Hours</a></div>
 				<div class="panel-body">
 					<div>
 					<a href="{{ action('HoursController@create') }}" class="btn btn-primary">Add Hours</a>
@@ -52,13 +52,13 @@
 		
 		<div class="col-md-5 col-md-pull-7">
 			<div class="panel panel-default">
-				<div class="panel-heading">Expenses</div>
+				<div class="panel-heading"><a href="{{ action('ExpensesController@index') }}">Expenses</a></div>
 				<div class="panel-body">
 					<div>
-					<a href="{{ action('PaymentsController@create') }}" class="btn btn-primary">New Expense</a>
+					<a href="{{ action('ExpensesController@create') }}" class="btn btn-primary">New Expense</a>
 					<br>
 					</div>
-				@include('tables.expenses')				
+				@include('tables.expenses', [$columns= 4])				
 
 				</div>
 			</div>
@@ -68,13 +68,13 @@
 	<div class="row">
 		<div class="col-md-12 col-md-push-0">
 			<div class="panel panel-default">
-				<div class="panel-heading">Clients</div>
+				<div class="panel-heading"><a href="{{ action('ClientsController@index') }}">Clients</a></div>
 				<div class="panel-body">
 					<div>
 					<a href="{{ action('ClientsController@create') }}" class="btn btn-primary">Create New Client</a>
 					</div>
 							
-				@include('tables.hours')				
+				@include('tables.clients')				
 
 				</div>
 			</div>

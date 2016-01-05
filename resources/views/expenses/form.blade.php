@@ -1,7 +1,11 @@
 	<div class="form-group">
 		<label class="col-md-4 control-label">Project</label>
 		<div class="col-md-6">
-			{!! Form::select('project_id', $projects, null, ['id' => 'project_id', 'class' => 'form-control'])!!}
+			<select class="form-control">
+			@foreach ($projects as $project)
+				<option name="project_id" value="{{$project->id}}">{{ $project->project_name . ' - ' . $project->first_name }}</option>
+			@endforeach
+			</select>
 		</div>
 	</div>
 

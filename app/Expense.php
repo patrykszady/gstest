@@ -25,7 +25,7 @@ class Expense extends Model {
 	
 			public function getPaidOnAttribute($date)
 			{
-				return $this->attributes['paid_on'] = Carbon::createFromFormat('Y-m-d', $date)->toFormattedDateString();   
+				return $this->attributes['paid_on'] = Carbon::createFromFormat('Y-m-d', $date)->toFormattedDateString('m-d');   
 			}
 
 			
@@ -39,6 +39,11 @@ class Expense extends Model {
 			public function employee()
 			{
 				return $this->belongsTo('App\Sub');
+			}
+
+			public function client()
+			{
+				return $this->belongsTo('App\Client');
 			}
 
 

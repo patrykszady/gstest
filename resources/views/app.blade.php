@@ -36,6 +36,8 @@
 					<li><a href="/clients">Clients</a></li>
 					<li><a href="/projects">Projects</a></li>
 					<li><a href="/expenses">Expenses</a></li>
+					<li><a href="/hours">Hours</a></li>
+					<li><a href="/subs">Subcontractors</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

@@ -13,10 +13,11 @@ class Hour extends Model {
 		'day_worked'
 	];
 
-	/*public function getDayWorkedAttribute($date)
+	public function getDayWorkedAttribute($date)
 			{
 				return $this->attributes['day_worked'] = Carbon::createFromFormat('Y-m-d', $date)->toFormattedDateString();   
-			}*/
+			}
+	
 
 	public function setEmployeeAttribute($name)
 	{

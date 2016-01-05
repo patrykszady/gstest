@@ -23,14 +23,6 @@ class SubRequest extends Request {
 	{
 		return [
 			'company_name' => 'required|min:3',
-			'first_name' => 'required|min:3',
-			'last_name' => 'required|min:3',
-			'address' => 'required|min:3',
-			'city' => 'required|min:3',
-			'state' => 'required|size:2',
-			'zip' => 'required|digits:5',
-			'phone' => 'required|digits:10' ,
-			'email' => 'required|email',
 			'employee' => 'required'
 		];
 	}

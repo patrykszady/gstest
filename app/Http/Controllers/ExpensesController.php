@@ -41,8 +41,10 @@ class ExpensesController extends Controller {
 
 	public function create()
 	{
-		
-		$projects = Project::lists('project_name', 'id'); //sends an array of  'first_name' => 'id'
+
+	
+		$projects = Project::get(); //sends an array of  'first_name' => 'id'
+	
 		$subs = Sub::lists('company_name', 'id'); 
 		
 		return view('expenses.create', compact('projects', 'subs'));
@@ -50,6 +52,11 @@ class ExpensesController extends Controller {
 
 	public function store(ExpenseRequest $request)
 	{
+
+
+	
+
+
 
 		if($request->hasFile('file')){
 			$file = $request->file('file');

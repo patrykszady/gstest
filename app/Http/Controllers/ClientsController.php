@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Client;
+use App\Expense;
 use App\Http\Requests;
 use App\Http\Requests\ClientRequest;
 use App\Http\Controllers\Controller;

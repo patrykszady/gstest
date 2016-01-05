@@ -69,14 +69,14 @@ class SubsController extends Controller {
 		return redirect('clients');
 	}
 
-	public function edit(Client $client){
+	public function edit(Sub $sub){
 
-		$clients = Client::lists('first_name', 'id');
+		
 
-		return view('clients.edit', compact('client', 'clients'));
+		return view('subs.edit', compact('sub'));
 	}
 
-	public function update(Client $client, ClientRequest $request){ //Client $client refrences a Route Model Binding method found is RouteServiceProvider.php
+	public function update(Sub $sub, SubRequest $request){ //Client $client refrences a Route Model Binding method found is RouteServiceProvider.php
 
 		$client->update($request->all());
 

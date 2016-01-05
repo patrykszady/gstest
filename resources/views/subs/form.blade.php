@@ -81,19 +81,23 @@
 			  <option value="3">Carpentry</option>
 			  <option value="4">Drywall</option>
 			  <option value="5">Painting</option>
+			  <option value="5">General</option>
 			</select>
 		</div>
 	</div>
 
 
 	<div class="form-group">
-		<label class="col-md-4 control-label">Employee of GS?</label>
+		<label class="col-md-4 control-label">Type of provider</label>
 		<div class="col-md-6">
 			<label class="radio-inline">
- 				 <input type="radio" name="employee" id="inlineRadio3" value="1">Yes
+ 				 <input type="radio" name="employee" id="inlineRadio3" value="1">Employee
 			</label>
 			<label class="radio-inline">
- 				 <input type="radio" name="employee" id="inlineRadio3" value="2" checked="checked">No
+ 				 <input type="radio" name="employee" id="inlineRadio3" value="2" checked="checked">Subcontractor
+			</label>
+			<label class="radio-inline">
+ 				 <input type="radio" name="employee" id="inlineRadio3" value="3" checked="checked">Vendor
 			</label>
 		</div>
 	</div>

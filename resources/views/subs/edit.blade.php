@@ -6,8 +6,8 @@
 
 	@include('errors.list')
 <div class="form-group">
-	{!! Form::model($client, ['method' => 'PATCH', 'action' => ['ClientsController@update', $client->id]])  !!}
-		@include('clients.form', [$submitButton='Edit Client'])
+	{!! Form::model($sub, ['method' => 'PATCH', 'action' => ['SubsController@update', $sub->id]])  !!}
+		@include('subs.form', [$submitButton='Update Provider'])
 	{!! Form::close() !!}
 
 </div>

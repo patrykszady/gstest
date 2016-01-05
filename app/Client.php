@@ -66,6 +66,10 @@ class Client extends Model {
 		return $this->hasMany('App\Project');
 	}
 
+	public function expenses() 
+	{
+		return $this->hasMany('App\Expense');
+	}
 
 
 }

@@ -36,12 +36,13 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+		$clients = Client::get();
 		$projects = Project::get();
 		$expenses = Expense::get();
 		$payments = Payment::get();
 		$hours = Hour::get();
 
-		return view('home', compact('projects', 'expenses', 'payments', 'hours'));
+		return view('home', compact('projects', 'expenses', 'payments', 'hours', 'clients'));
 	}
 
 }
