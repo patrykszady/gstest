@@ -13,7 +13,7 @@
 				<br>
 							
 
-				@include('tables.expenses')				
+				@include('tables.expenses', [$columns= 4])			
 
 				</div>
 			</div>
