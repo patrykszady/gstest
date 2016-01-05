@@ -17,7 +17,7 @@
 	<div class="form-group">
 		<label class="col-md-4 control-label">Project</label>
 		<div class="col-md-6">
-			<select class="form-control">
+			<select class="form-control" name="project_id">
 			@foreach ($projects as $project)
 				<option name="project_id" value="{{$project->id}}">{{ $project->project_name . ' - ' . $project->first_name }}</option>
 			@endforeach
