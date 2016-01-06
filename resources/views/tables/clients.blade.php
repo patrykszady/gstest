@@ -11,7 +11,7 @@
 	<tr>
 		<td><a href="{{ action('ClientsController@show', [$client->id]) }}">{{ $client->first_name . ' ' . $client->last_name }}</a></td>
 		<td>{{ $client->address . ', ' . $client->city . ', '  .$client->state. ' ' . $client->zip }}</td>
-		<td>{{ $client->phone }}</td>
+		<td><a href="tel:+1{{ $client->phone }}">{{ $client->phone }}</a></td>
 		<td>{{ $client->email }}</td>
 		<td><a href="/projects/create/{{ $client->id }}">New Project</td>
 	</tr>	

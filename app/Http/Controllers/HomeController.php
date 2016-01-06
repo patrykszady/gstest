@@ -36,11 +36,11 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$clients = Client::get();
-		$projects = Project::get();
-		$expenses = Expense::get();
-		$payments = Payment::get();
-		$hours = Hour::get();
+		$clients = Client::orderBy('created_at', 'desc')->get();
+		$projects = Project::orderBy('created_at', 'desc')->get();
+		$expenses = Expense::where('office', '=', '2')->orderBy('paid_on', 'desc')->get();
+		$payments = Payment::orderBy('created_at', 'desc')->get();
+		$hours = Hour::orderBy('created_at', 'desc')->get();
 
 		return view('home', compact('projects', 'expenses', 'payments', 'hours', 'clients'));
 	}

@@ -1,7 +1,7 @@
 	<div class="form-group">
 		<label class="col-md-4 control-label">Project</label>
 		<div class="col-md-6">
-			<select class="form-control">
+			<select class="form-control" name="project_id">
 			@foreach ($projects as $project)
 				<option name="project_id" value="{{$project->id}}">{{ $project->project_name . ' - ' . $project->first_name }}</option>
 			@endforeach
@@ -9,6 +9,20 @@
 		</div>
 	</div>
 
+	<div class="form-group">
+		<label class="col-md-4 control-label">Office Expense</label>
+		<div class="col-md-6">
+			<label class="radio-inline">			
+				{!! Form::radio('office', '1', ['id' => 'office'])!!}
+				Yes
+			</label>
+			<label class="radio-inline">			
+				{!! Form::radio('office', '2', true , ['id' => 'office'])!!}
+				No
+			</label>
+		</div>
+	</div>
+	<br>
 
 	<div class="form-group">
 		<label class="col-md-4 control-label">Sub Contractor/Vendor</label>
@@ -44,6 +58,13 @@
 		<label class="col-md-4 control-label">Amount Paid</label>
 		<div class="col-md-6">
 			{!! Form::text('amount_paid', null, ['placeholder' => '1000.10', 'class' => 'form-control'])!!}
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-md-4 control-label">Note</label>
+		<div class="col-md-6">
+			{!! Form::text('note', null, ['placeholder' => 'Add Expense Notes Here', 'class' => 'form-control'])!!}
 		</div>
 	</div>
 

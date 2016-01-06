@@ -10,6 +10,8 @@ class Expense extends Model {
 		'reimbursment',
 		'amount_paid',
 		'employee_id',
+		'note',
+		'office',
 		'paid_on'
 	];
 

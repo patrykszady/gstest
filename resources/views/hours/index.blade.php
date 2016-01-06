@@ -23,9 +23,9 @@
 				<div class="panel-heading">Pay</div>
 				<div class="panel-body">
 				<a href="{{ action('HoursController@create') }}">Add Hours</a>
-				<h4><a href="hours/1/createpayment">Pay Patryk</a></h4>		
-				<h4><a href="hours/2/createpayment">Pay Greg</a></h4>
-				<h4><a href="hours/3/createpayment">Pay Bogdan</a></h4>
+				<h4><a href="hours/2/createpayment">Pay Patryk</a></h4>		
+				<h4><a href="hours/1/createpayment">Pay Greg</a></h4>
+				<h4><a href="hours/4/createpayment">Pay Bogdan</a></h4>
 				</div>
 			</div>
 		</div>
