@@ -18,6 +18,8 @@ class CreateExpensesTable extends Migration {
 			$table->integer('project_id')->unsigned();
 			$table->string('amount_paid');
 			$table->integer('employee_id')->unsigned();   //for now just ID -- need to create employee table //sub contractor
+			$table->string('note');
+			$table->integer('office');
 			$table->date('paid_on');
 			$table->string('receipt_url');
 			$table->string('reimbursment');
