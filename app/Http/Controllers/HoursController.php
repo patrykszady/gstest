@@ -8,7 +8,7 @@ use App\Sub;
 use App\Http\Requests;
 // use App\Http\Requests\ClientRequest;
 use App\Http\Requests\HourRequest;
-use App\Http\Requests\CreatepaymentRequest;
+use App\Http\Requests\CreatePaymentRequest;
 use App\Http\Controllers\Controller;
 // use Illuminate\Http\Request;
 use Request;
