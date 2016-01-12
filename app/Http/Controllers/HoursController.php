@@ -26,7 +26,7 @@ class HoursController extends Controller {
 	{
 
 		// \Auth::user()->name; //get name of Auth user
-		$hours = Hour::get();
+		$hours = Hour::where('amount_paid', '<', 0)->orderBy('day_worked', 'desc')->get();
 
 		return view('hours.index', compact('hours'));
 	}
@@ -72,7 +72,8 @@ class HoursController extends Controller {
 		Expense::create(['project_id' => $hour->project_id, 
 						'employee_id' => $request->employee_id, 
 						'paid_on' => $request->paid_on,//amount paid / hours * amount of hrs for this project
-						'amount_paid' => round(($request->amount_paid / $hourspaid) * $hour->where('project_id', '=', $hour->project->id)->where('employee_id', '=', $request->employee_id)->sum('hours'), 2)  ]);
+						'amount_paid' => round(($request->amount_paid / $hourspaid) * $hour->where('project_id', '=', $hour->project->id)->where('employee_id', '=', $request->employee_id)->sum('hours'), 2),
+						'reimbursment' => 2, 'office' => 2  ]);
 		}
 
 		$hours = Hour::where('employee_id', '=', $request->employee_id)->where('amount_paid', '=', '')->get();

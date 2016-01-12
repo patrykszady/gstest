@@ -6,6 +6,7 @@
 			<th>Amount Paid</th>
 			<th>Date Paid</th>
 			<th>Edit</th>
+			<th>Receipt</th>
 		</tr>
 
 		@foreach ($expenses as $expense)
@@ -36,6 +37,7 @@
 			<td>  ${{ number_format(round($expense->amount_paid,2),2) }}</td>
 			<td>{{ $expense->paid_on }}</td>
 			<td><a href="{{ action('ExpensesController@edit', [$expense->id]) }}">Edit</a></td>
+			<td><a href="public/docs/expenses/{{ $expense->receipt_url }}">Receipt</td>
 		</tr>	
 		@endforeach 
 	</table>

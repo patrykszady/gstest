@@ -13,7 +13,7 @@
 
 					<div class="form-group">
 						{!! Form::open(['action' => 'ExpensesController@store', 'class' => 'form-horizontal', 'role'=>'form', 'files' => true]) !!}   {{-- 'url' => '/clients'   -- if it doesnt work! --}}
-							@include('expenses.form', [$submitButton='Add Expense'])
+							@include('expenses.form', [$submitButton='Add Expense', $exp = 'none'])
 						{!! Form::close() !!}
 					</div>
 

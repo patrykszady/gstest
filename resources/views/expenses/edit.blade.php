@@ -13,7 +13,7 @@
 
 					<div class="form-group">
 						{!! Form::model($expense, ['method' => 'PATCH', 'class' => 'form-horizontal', 'role'=>'form', 'files' => true, 'action' => ['ExpensesController@update', $expense->id]]) !!}   {{-- 'url' => '/clients'   -- if it doesnt work! --}}
-							@include('expenses.form', [$submitButton='Update Expense'])
+							@include('expenses.form', [$submitButton='Update Expense', $exp = 'expense'])
 						{!! Form::close() !!}
 					</div>
 

@@ -89,7 +89,7 @@ class HdreceiptsController extends Controller {
 							}	
 
 
-				Expense::insert(['amount_paid' => $amount, 'employee_id' => '1', 'paid_on' => date('Y-m-d'), 'Project_id' => $project, 'created_at' => date("Y-m-d H:i:s"), 'updated_at' => date("Y-m-d H:i:s")]);
+				Expense::insert(['amount_paid' => $amount, 'employee_id' => '5', 'paid_on' => date('Y-m-d'), 'Project_id' => $project, 'created_at' => date("Y-m-d H:i:s"), 'updated_at' => date("Y-m-d H:i:s"), 'reimbursment' => 2, 'office' => 2]);
 
 
 				$attachments = $message->getAttachments();
