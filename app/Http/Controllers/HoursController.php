@@ -15,16 +15,6 @@ use Request;
 use Carbon\Carbon;
 
 
-				$strip = str_replace(' ', '', strip_tags($message->getBodyHtml()));
-				$first = strpos($strip, 'TOTAL$');
-				$space = strpos($strip, 'X', $first) - $first - 6;
-				$value = substr($strip, $first+5, 1);
-				
-			
-				print_r(substr($strip, $first+6, $space));
-
-
-
 class HoursController extends Controller {
 
 	public function __construct()

@@ -2,20 +2,20 @@
 
 @section('content')
 
-<div class="col-md-0 col-md-pull-12">
+<div class="container">
+<div class="row">
+		<div class="col-md-10 col-md-offset-1 alert alert-danger" >
 			<div class="panel panel-default">
-				<div class="panel-heading"><a href="{{ action('ExpensesController@index') }}">Expenses</a></div>
+				<div class="panel-heading"><a href="{{ action('ExpensesController@index') }}">Missed Expenses</a></div>
 				<div class="panel-body">
-					<div>
-					<a href="{{ action('ExpensesController@create') }}" class="btn btn-primary">New Expense</a>
-					<br>
-					</div>
+				
 				@include('tables.expensess')				
 
 				</div>
 			</div>
 		</div>
-
+</div>
+</div>
 
 <div class="container-fluid">
 	<div class="row">

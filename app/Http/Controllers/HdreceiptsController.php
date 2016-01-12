@@ -74,7 +74,7 @@ class HdreceiptsController extends Controller {
 						{
 							$spc = strpos($strip, 'PRO', $po) - $po - 14;
 							$pro = substr($strip, $po+8, $spc);		
-							$project_id = Project::where('project_id', $pro)->first();
+							$project_id = Project::where('project_id', $pro)->firstOrFail();
 						}
 					//check if PROJECT NAME/ PO/JOBNAME from receipt exists in database, if not, project is 0
 					
