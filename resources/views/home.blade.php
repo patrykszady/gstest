@@ -3,7 +3,7 @@
 @section('content')
 
 
-@if ($expensess > '1')
+@if (!is_null($expensesss))
 <div class="container">
 <div class="row">
 		<div class="col-md-10 col-md-offset-1 alert alert-danger" >
