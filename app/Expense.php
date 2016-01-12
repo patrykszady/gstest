@@ -12,7 +12,8 @@ class Expense extends Model {
 		'employee_id',
 		'note',
 		'office',
-		'paid_on'
+		'paid_on',
+		'project_number'
 	];
 
 		/*	public function setPaidOnAttribute($date)

@@ -57,6 +57,7 @@ class ProjectsController extends Controller {
 
 		//AFTER the row is added, get the last record to pass to the next page.
 		$project = Project::latest()->first();
+		$update = 
 	
 		\Session::flash('flash_message', 'Client ' . $project->project_name . ' for '  . $project->last_name . ' was created.');
 

@@ -20,7 +20,8 @@ class Project extends Model {
 		'status',
 		'client_id',
 		'started_on',
-		'finished_on'
+		'finished_on',
+		'project_number'
 	];
 
 			public function setStartedOnAttribute($date)

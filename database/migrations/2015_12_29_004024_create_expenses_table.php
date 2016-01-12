@@ -24,11 +24,6 @@ class CreateExpensesTable extends Migration {
 			$table->string('receipt_url');
 			$table->string('reimbursment');
 			$table->timestamps();
-
-			$table->foreign('project_id')
-				  ->references('id')
-				  ->on('projects');
-								  
 		});
 
 
