@@ -9,7 +9,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Hours</div>
 				<div class="panel-body">
-				<a href="{{ action('HoursController@create') }}">Add Hours</a>
+				<a href="{{ action('HoursController@create') }}" class="btn btn-primary">Add Hours</a>
 				
 
 				@include('tables.hours')				

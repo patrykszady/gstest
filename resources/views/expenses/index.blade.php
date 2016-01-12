@@ -9,7 +9,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Expenses</div>
 				<div class="panel-body">
-				<a href="{{ action('ExpensesController@create') }}">Add New Expense</a>
+				<a href="{{ action('ExpensesController@create') }}" class="btn btn-primary">Add New Expense</a>
 				<br>
 							
 

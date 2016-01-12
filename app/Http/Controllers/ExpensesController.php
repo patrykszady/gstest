@@ -27,10 +27,11 @@ class ExpensesController extends Controller {
 		
 		$expenses = Expense::where('office', '=', '2')->orderBy('paid_on', 'desc')->get();
 		$payments = Payment::orderBy('paid_on', 'desc')->get();
+		
 
 		// \Auth::user()->name; //get name of Auth user
-		// $expenses = Expense::leftJoin('projects', 'expenses.project_id', '=', 'projects.id')->get();
-		return view('expenses.index', compact('expenses', 'payments', 'expenses'));
+		
+		return view('expenses.index', compact('expenses', 'payments'));
 	}
 
 	//NOT ACTIVE NOR WORKING RIGHT NOW

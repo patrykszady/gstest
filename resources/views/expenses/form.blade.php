@@ -4,11 +4,9 @@
 			<select class="form-control" name="project_id">
 			@foreach ($projects as $project)
 				<option name="project_id" value="{{$project->id}}">{{ $project->project_name . ' - ' . $project->first_name }}</option>
-			@endforeach
-
-			@if ($expense->project_id == 0)
-			
-			@elseif ($exp == 'expense')
+			@endforeach			
+		
+			@if (isset($expense) and $expense->project_id > 0)
 			<option name="project_id" value="{{$expense->project_id}}" selected>{{$expense->project->project_name . ' - ' . $expense->project->first_name }}</option>
 			@endif
 			</select>

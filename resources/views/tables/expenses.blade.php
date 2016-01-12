@@ -32,8 +32,8 @@
 
 		@foreach ($expenses as $expense)
 		<tr>
-			<td><a href="{{ action('SubsController@show', [$expense->employee->id]) }}">{{ $expense->employee->company_name }}</a></td>
-			<td><a href="{{ action('ProjectsController@show', [$expense->project->id]) }}">{{ $expense->project->project_name . ' - ' . $expense->project->first_name }}</a></td>
+			<td><a href="{{ action('SubsController@show', [$expense->employee_id]) }}">{{ $expense->employee->company_name }}</a></td>
+			<td><a href="{{ action('ProjectsController@show', [$expense->project_id]) }}">{{ $expense->project->project_name . ' - ' . $expense->project->first_name }}</a></td>
 			<td>  ${{ number_format(round($expense->amount_paid,2),2) }}</td>
 			<td>{{ $expense->paid_on }}</td>
 			<td><a href="{{ action('ExpensesController@edit', [$expense->id]) }}">Edit</a></td>
