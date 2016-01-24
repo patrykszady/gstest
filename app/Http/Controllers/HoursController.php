@@ -65,18 +65,22 @@ class HoursController extends Controller {
 		$hour = Hour::find($request->employee_id);
 
 		$hourspaid =  $hour->where('amount_paid', '=', '')->where('employee_id', '=', $request->employee_id)->sum('hours');
-		$hours = Hour::where('employee_id', '=', $request->employee_id)->where('amount_paid', '=', '')->groupBy('project_id')->get();
 
+		$hours = Hour::where('employee_id', '=', $request->employee_id)->where('amount_paid', '=', '')->groupBy('project_id')->get();
+		
+		
 		foreach ($hours as $hour)
 		{
 		Expense::create(['project_id' => $hour->project_id, 
 						'employee_id' => $request->employee_id, 
 						'paid_on' => $request->paid_on,//amount paid / hours * amount of hrs for this project
-						'amount_paid' => round(($request->amount_paid / $hourspaid) * $hour->where('project_id', '=', $hour->project->id)->where('employee_id', '=', $request->employee_id)->sum('hours'), 2),
+						'amount_paid' => round(($request->amount_paid / $hourspaid) * $hour->where('project_id', '=', $hour->project->id)->where('amount_paid', '=', '')->where('employee_id', '=', $request->employee_id)->sum('hours'), 2),
 						'reimbursment' => 2, 'office' => 2  ]);
 		}
 
+		
 		$hours = Hour::where('employee_id', '=', $request->employee_id)->where('amount_paid', '=', '')->get();
+		
 		foreach ($hours as $hour)
 		{
 		$update = Hour::where('id', '=', $hour->id )->update(['amount_paid' => round(($request->amount_paid / $request->hours) * $hour->hours,2) ]);
